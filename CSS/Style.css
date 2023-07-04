@@ -1,0 +1,221 @@
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+
+body{
+    background-color: orange;
+}
+
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*estilos para Home*/
+
+header{
+    background-color: darkgrey;
+}
+
+
+header h1{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: underline;
+    background-color: crimson;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    word-spacing: 50px;
+
+}
+
+
+
+header nav ul{
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header nav ul li{
+    color: green;
+    font-size: 26px;
+}
+
+header nav ul li a{
+    color: green;
+    text-decoration: none;
+    font-size: 20px;
+    width: 75px;
+    height: 75px;
+    gap: 10px;
+}
+
+header h2{
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 10%);
+    gap: 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 4rem;
+    
+
+}
+
+main img{
+    
+    width: 100%;
+    height: 80%;
+    gap: 10px;
+    
+    
+}
+
+section{
+    height: 300px;
+    
+    
+}
+footer{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/*mq de desktop*/
+
+@media screen and (min-width:1024px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 20%);
+    }
+
+    main h2 p{
+        grid-template-columns: none;
+        grid-template-rows: none;
+        background-color: coral;
+        font-weight: 100px;
+        font-size: 20px;
+        
+
+    }
+
+    main div ul li{
+        background-color: chocolate;
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px;
+        margin-top: 10px;
+        
+        
+    
+    }
+    main div ul li ol li p{
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: none;
+    }    
+    
+}
+
+
+/*estilos para contacto*/
+
+main form fieldset legend div label{
+    
+}
+
+    
+/*estilos para nosotros*/
+    
+/*estilos para productos*/
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 0.5fr 1fr 2fr 0.5fr;
+
+    /* estructurar por areas*/
+    grid-template-areas: 
+        "header header"
+        "main seccion-uno"
+        "seccion-dos seccion-uno"
+        "footer footer";
+    gap: 10px;
+
+}
+
+header{
+    background-color: tomato;
+    grid-area: header;
+
+}
+
+header nav ul{
+    height: 100px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main{
+    background-color: rgb(192, 129, 118);
+    grid-area: main;
+}
+
+.seccion-uno{
+    background-color: aqua;
+    grid-area: seccion-uno;
+}
+
+.seccion-dos{
+    background-color: orange;
+    grid-area: seccion-dos;
+}
+
+footer{
+    text-align: center;
+    background-color: azure;
+    grid-area: footer;
+}
+
+/*estilos para servicios*/
+
+.different ul li{
+    background-color: blueviolet;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-top: 20px;
+
+
+}
+.different ul li ul li{
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    text-decoration-color: bisque;
+    padding: 15px;
+    
+    
+}
